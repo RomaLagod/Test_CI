@@ -59,7 +59,7 @@ namespace FluxdayIO_ATQC
             Thread.Sleep(4000);
 
             Assert.AreEqual("+Task",
-                driver.FindElement(By.CssSelector("body > div.fixed > nav > section > ul.right > li > a")).Text);
+                driver.FindElement(By.CssSelector("body > div.fixed > nav > section > ul.right > li > a")).Text,"[OK]");
             //
             //IJavaScriptExecutor javaScript = (IJavaScriptExecutor)driver;
             //javaScript.ExecuteScript("alert('Hello!');");

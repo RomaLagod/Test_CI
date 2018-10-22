@@ -5824,11 +5824,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Work_Table\\ШАГ\\SoftServe\\ITAcademy\\Project\\EmptyProject_VS\\FluxdayIO_ATQC\\FluxdayIO_ATQC\\FluxdayIO_ATQC.csproj",
+      "projectUniqueName": "E:\\Work_Table\\STEP\\SoftServe\\ITAcademy\\GitRepoFluxDayIO\\Test_test\\Test_CI\\FluxdayIO_ATQC\\FluxdayIO_ATQC\\FluxdayIO_ATQC.csproj",
       "projectName": "FluxdayIO_ATQC",
-      "projectPath": "E:\\Work_Table\\ШАГ\\SoftServe\\ITAcademy\\Project\\EmptyProject_VS\\FluxdayIO_ATQC\\FluxdayIO_ATQC\\FluxdayIO_ATQC.csproj",
+      "projectPath": "E:\\Work_Table\\STEP\\SoftServe\\ITAcademy\\GitRepoFluxDayIO\\Test_test\\Test_CI\\FluxdayIO_ATQC\\FluxdayIO_ATQC\\FluxdayIO_ATQC.csproj",
       "packagesPath": "C:\\Users\\RMK\\.nuget\\packages\\",
-      "outputPath": "E:\\Work_Table\\ШАГ\\SoftServe\\ITAcademy\\Project\\EmptyProject_VS\\FluxdayIO_ATQC\\FluxdayIO_ATQC\\obj\\",
+      "outputPath": "E:\\Work_Table\\STEP\\SoftServe\\ITAcademy\\GitRepoFluxDayIO\\Test_test\\Test_CI\\FluxdayIO_ATQC\\FluxdayIO_ATQC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

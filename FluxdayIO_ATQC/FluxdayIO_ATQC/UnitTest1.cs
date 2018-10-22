@@ -17,7 +17,8 @@ namespace FluxdayIO_ATQC
         [OneTimeSetUp]
         public void BeforeAllMethods()
         {
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(Environment.CurrentDirectory);
+            //driver = new FirefoxDriver();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
@@ -46,7 +47,7 @@ namespace FluxdayIO_ATQC
             driver.FindElement(By.Id("user_email")).Click();
             driver.FindElement(By.Id("user_email")).Clear();
             //driver.FindElement(By.Id("lst-ib")).SendKeys("selenium ide" + Keys.Enter);
-            driver.FindElement(By.Id("user_email")).SendKeys("admin@fluxday.io");
+            driver.FindElement(By.Id("user_email")).SendKeys("lead@fluxday.io");
             Thread.Sleep(4000);
 
             driver.FindElement(By.Id("user_password")).Click();

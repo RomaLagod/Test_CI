@@ -10,6 +10,7 @@ using System;
 
 namespace FluxdayIO_ATQC
 {
+    [TestFixture]
     public class UnitTest1
     {
         private IWebDriver driver;

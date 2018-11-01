@@ -59,7 +59,7 @@ namespace FluxdayIO_ATQC
             //driverOpera56.Quit();
         }
 
-        [Test]
+        //[Test]
         public void TestChrome70()
         {
             var capabilitiesChrome70 = new DesiredCapabilities("chrome", "70.0", new Platform(PlatformType.Any));

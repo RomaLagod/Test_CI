@@ -12,11 +12,11 @@ namespace FluxdayIO_ATQC
     [Parallelizable(ParallelScope.All)]
     public class TaskUI
     {
-        private IWebDriver driver1;
-        private IWebDriver driver2;
-        private IWebDriver driver3;
-        private IWebDriver driver4;
-        private IWebDriver driver5;
+        private IWebDriver driver1 = null;
+        private IWebDriver driver2 = null;
+        private IWebDriver driver3 = null;
+        private IWebDriver driver4 = null;
+        private IWebDriver driver5 = null;
 
 
         [OneTimeSetUp]
@@ -31,17 +31,11 @@ namespace FluxdayIO_ATQC
             driver1.Manage().Window.Size = new System.Drawing.Size(1920, 1080); //(new Dimension(1920, 1080));
             driver1.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
-            var capabilities2 = new DesiredCapabilities("chrome", "69.0", new Platform(PlatformType.Any));
-            capabilities2.SetCapability("enableVNC", true);
-            driver2 = new RemoteWebDriver(new Uri("http://172.17.0.1:4444/wd/hub"), capabilities2);
-            driver2.Manage().Window.Size = new System.Drawing.Size(1920, 1080); //(new Dimension(1920, 1080));
-            driver2.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-
-            //var capabilities5 = new DesiredCapabilities("chrome", "70.0", new Platform(PlatformType.Any));
-            //capabilities5.SetCapability("enableVNC", true);
-            //driver5 = new RemoteWebDriver(new Uri("http://172.22.84.113:4444/wd/hub"), capabilities5);
-            //driver5.Manage().Window.Size = new System.Drawing.Size(1920, 1080); //(new Dimension(1920, 1080));
-            //driver5.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            //var capabilities2 = new DesiredCapabilities("chrome", "69.0", new Platform(PlatformType.Any));
+            //capabilities2.SetCapability("enableVNC", true);
+            //driver2 = new RemoteWebDriver(new Uri("http://172.17.0.1:4444/wd/hub"), capabilities2);
+            //driver2.Manage().Window.Size = new System.Drawing.Size(1920, 1080); //(new Dimension(1920, 1080));
+            //driver2.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
             var capabilities3 = new DesiredCapabilities("firefox", "61.0", new Platform(PlatformType.Any));
             capabilities3.SetCapability("enableVNC", true);
@@ -54,13 +48,19 @@ namespace FluxdayIO_ATQC
             //driver4 = new RemoteWebDriver(new Uri("http://172.22.84.113:4444/wd/hub"), capabilities4);
             //driver4.Manage().Window.Size = new System.Drawing.Size(1920, 1080); //(new Dimension(1920, 1080));
             //driver4.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+            //var capabilities5 = new DesiredCapabilities("chrome", "70.0", new Platform(PlatformType.Any));
+            //capabilities5.SetCapability("enableVNC", true);
+            //driver5 = new RemoteWebDriver(new Uri("http://172.22.84.113:4444/wd/hub"), capabilities5);
+            //driver5.Manage().Window.Size = new System.Drawing.Size(1920, 1080); //(new Dimension(1920, 1080));
+            //driver5.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         [SetUp]
         public void SetUp()
         {
             driver1.Navigate().GoToUrl("https://app.fluxday.io/users/sign_in");
-            driver2.Navigate().GoToUrl("https://app.fluxday.io/users/sign_in");
+            //driver2.Navigate().GoToUrl("https://app.fluxday.io/users/sign_in");
             driver3.Navigate().GoToUrl("https://app.fluxday.io/users/sign_in");
             //driver4.Navigate().GoToUrl("https://app.fluxday.io/users/sign_in");
             //driver5.Navigate().GoToUrl("https://app.fluxday.io/users/sign_in");
@@ -72,7 +72,7 @@ namespace FluxdayIO_ATQC
         public void AfterAllMethods()
         {
             driver1.Quit();
-            driver2.Quit();
+            //driver2.Quit();
             driver3.Quit();
             //driver4.Quit();
             //driver5.Quit();
@@ -139,7 +139,7 @@ namespace FluxdayIO_ATQC
 
         }
 
-        [Test]
+        //[Test]
         public void FirstTest3()
         {
             Console.WriteLine("Start test");

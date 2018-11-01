@@ -63,9 +63,9 @@ namespace FluxdayIO_ATQC
         public void TestChrome70()
         {
             var capabilitiesChrome70 = new DesiredCapabilities("chrome", "70.0", new Platform(PlatformType.Any));
-            capabilitiesChrome70.SetCapability("enableVNC", true);
+            //capabilitiesChrome70.SetCapability("enableVNC", true);
             driverChrome70 = new RemoteWebDriver(new Uri("http://172.17.0.1:4444/wd/hub"), capabilitiesChrome70);
-            driverChrome70.Manage().Window.Size = new System.Drawing.Size(1920, 1080);
+            //driverChrome70.Manage().Window.Size = new System.Drawing.Size(1920, 1080);
             driverChrome70.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
             driverChrome70.Navigate().GoToUrl("https://app.fluxday.io/users/sign_in");
@@ -88,39 +88,12 @@ namespace FluxdayIO_ATQC
         }
 
         [Test]
-        public void TestChrome69()
-        {
-            var capabilitiesChrome69 = new DesiredCapabilities("chrome", "69.0", new Platform(PlatformType.Any));
-            capabilitiesChrome69.SetCapability("enableVNC", true);
-            driverChrome69 = new RemoteWebDriver(new Uri("http://172.17.0.1:4444/wd/hub"), capabilitiesChrome69);
-            driverChrome69.Manage().Window.Size = new System.Drawing.Size(1920, 1080);
-            driverChrome69.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-
-            driverChrome69.Navigate().GoToUrl("https://app.fluxday.io/users/sign_in");
-            
-            driverChrome69.FindElement(By.Id("user_email")).Click();
-            driverChrome69.FindElement(By.Id("user_email")).Clear();
-            driverChrome69.FindElement(By.Id("user_email")).SendKeys("lead@fluxday.io");
-
-            driverChrome69.FindElement(By.Id("user_password")).Click();
-            driverChrome69.FindElement(By.Id("user_password")).Clear();
-            driverChrome69.FindElement(By.Id("user_password")).SendKeys("password");
-
-            driverChrome69.FindElement(By.CssSelector("#new_user > div.set > div.field-login > button")).Click();
-
-            Assert.AreEqual("+Task",
-                driverChrome69.FindElement(By.CssSelector("body > div.fixed > nav > section > ul.right > li > a")).Text);
-
-            driverChrome69.Quit();
-        }
-
-        [Test]
         public void TestFirefox62()
         {
             var capabilitiesFirefox62 = new DesiredCapabilities("firefox", "62.0", new Platform(PlatformType.Any));
-            capabilitiesFirefox62.SetCapability("enableVNC", true);
+            //capabilitiesFirefox62.SetCapability("enableVNC", true);
             driverFirefox62 = new RemoteWebDriver(new Uri("http://172.17.0.1:4444/wd/hub"), capabilitiesFirefox62);
-            driverFirefox62.Manage().Window.Size = new System.Drawing.Size(1920, 1080);
+            //driverFirefox62.Manage().Window.Size = new System.Drawing.Size(1920, 1080);
             driverFirefox62.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
             driverFirefox62.Navigate().GoToUrl("https://app.fluxday.io/users/sign_in");
@@ -139,6 +112,33 @@ namespace FluxdayIO_ATQC
                 driverFirefox62.FindElement(By.CssSelector("body > div.fixed > nav > section > ul.right > li > a")).Text);
 
             driverFirefox62.Quit();
+        }
+
+        [Test]
+        public void TestChrome69()
+        {
+            var capabilitiesChrome69 = new DesiredCapabilities("chrome", "69.0", new Platform(PlatformType.Any));
+            //capabilitiesChrome69.SetCapability("enableVNC", true);
+            driverChrome69 = new RemoteWebDriver(new Uri("http://172.17.0.1:4444/wd/hub"), capabilitiesChrome69);
+            //driverChrome69.Manage().Window.Size = new System.Drawing.Size(1920, 1080);
+            driverChrome69.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+            driverChrome69.Navigate().GoToUrl("https://app.fluxday.io/users/sign_in");
+            
+            driverChrome69.FindElement(By.Id("user_email")).Click();
+            driverChrome69.FindElement(By.Id("user_email")).Clear();
+            driverChrome69.FindElement(By.Id("user_email")).SendKeys("lead@fluxday.io");
+
+            driverChrome69.FindElement(By.Id("user_password")).Click();
+            driverChrome69.FindElement(By.Id("user_password")).Clear();
+            driverChrome69.FindElement(By.Id("user_password")).SendKeys("password");
+
+            driverChrome69.FindElement(By.CssSelector("#new_user > div.set > div.field-login > button")).Click();
+
+            Assert.AreEqual("+Task",
+                driverChrome69.FindElement(By.CssSelector("body > div.fixed > nav > section > ul.right > li > a")).Text);
+
+            driverChrome69.Quit();
         }
 
         //[Test]

@@ -9,7 +9,7 @@ using System.Threading;
 namespace FluxdayIO_ATQC
 {
     [TestFixture]
-    [Parallelizable(ParallelScope.All)]
+    //[Parallelizable(ParallelScope.All)]
     public class TaskUI
     {
         private IWebDriver driver1 = null;

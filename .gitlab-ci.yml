@@ -12,8 +12,6 @@ test_job:
   script:
   - dotnet test
   tags:
-  - my_tag
-  only:
-   - dev
+  - my-ubuntu
 
 

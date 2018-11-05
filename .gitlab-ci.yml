@@ -1,7 +1,19 @@
-job1:
+stages:
+  - before_test
+  - testing
+
+before_testing_job:
+  stage: before_test
   script:
-  - echo "hello"
   - dotnet restore
+
+test_job:
+  stage: testing
+  script:
   - dotnet test
   tags:
   - my_tag
+  only:
+   - dev
+
+
